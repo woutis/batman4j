@@ -41,8 +41,8 @@ configure([rootProject] + javaProjects) { project ->
     apply plugin: 'idea'
     apply plugin: "checkstyle"
 
-    sourceCompatibility = 8
-    targetCompatibility = 8
+    sourceCompatibility = 17
+    targetCompatibility = 17
 
     compileJava {
         options.encoding = "UTF-8"
