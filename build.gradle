@@ -114,7 +114,7 @@ configure([rootProject] + javaProjects) { project ->
 }
 
 configure(moduleProjects) { project ->
-    apply from: "${rootDir}/gradle/module.gradle"
+    apply from: "${rootDir}/gradle/module-config.gradle"
 }
 
 configure(rootProject) {
