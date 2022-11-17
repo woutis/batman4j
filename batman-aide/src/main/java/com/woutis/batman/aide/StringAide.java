@@ -20,7 +20,9 @@ import java.io.UnsupportedEncodingException;
 import java.nio.charset.Charset;
 
 /**
- * Modeled on:
+ * null-safe 的 String 操作。
+ *
+ * <p>Modeled on:
  * <ul>
  *     <li><a href="https://github.com/apache/commons-lang">Apache Commons Lang</a></li>
  *     <li><a href="https://github.com/google/guava">Google Guava</a></li>
@@ -62,6 +64,11 @@ public class StringAide {
      * @see <a href="http://docs.oracle.com/javase/specs/jls/se7/html/jls-3.html#jls-3.10.6">JLF: Escape Sequences for Character and String Literals</a>
      */
     public static final String CR = "\r";
+
+    /**
+     * 表示搜索失败时的索引值
+     */
+    public static final int INDEX_NOT_FOUND = -1;
 
     /**
      * <p>获取一个字符序列 {@link CharSequence} 的长度，如果字符序列为 {@code null} 则返回 {@code 0}。</p>
@@ -988,8 +995,6 @@ public class StringAide {
         }
         return true;
     }
-
-    public static final int INDEX_NOT_FOUND = -1;
 
     /**
      * 查找 target 在 input 第一次出现的位置索引。
